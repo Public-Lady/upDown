@@ -10,7 +10,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = untitled
 TEMPLATE = app
-
+LIBS+=-L. -lsqlite3
 
 SOURCES += main.cpp\
     updown/rectdown.cpp \
@@ -18,4 +18,7 @@ SOURCES += main.cpp\
 
 HEADERS  += \
     updown/rectdown.h \
-    updown/up_down.h
+    updown/up_down.h \
+    bd.h \
+    sqlite3.h \
+    word.h

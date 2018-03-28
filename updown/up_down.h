@@ -19,7 +19,7 @@
 #include <QVBoxLayout>
 #include "updown/rectdown.h"
 #include <string>
-
+#include "bd.h"
 class UpDown : public QWidget
 {
     Q_OBJECT

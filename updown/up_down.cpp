@@ -21,14 +21,16 @@ void UpDown::run(){
     scene->addItem(downWord);
     downWord->setPos((view->width()/2)-(downWord->myWidth/2),0);
     downWord->start();
+    std::vector<Word> AllWord=getWord();
+    if(AllWord.size()<7){
+        return;
+    }
     std::vector <std::string>ListWord;
-    ListWord.push_back("alone");
-    ListWord.push_back("force");
-    ListWord.push_back("and");
-    ListWord.push_back("different");
+    for(int i=0;i!=4;++i){
+        ListWord.push_back(AllWord[i].eng);
+    }
     for(int i=0;i!=4;++i){
         RectDown*nextWord=new RectDown;
-//        nextWord->m_text="we are "+std::to_string(i);
         nextWord->m_text=ListWord[i];
         scene->addItem(nextWord);
         int margin=(view->width()-(4*nextWord->myWidth)-4*10)/2;
