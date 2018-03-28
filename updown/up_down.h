@@ -27,7 +27,7 @@ public:
     explicit UpDown(QWidget *parent = 0);
     QGraphicsScene * scene;
     QGraphicsView * view;
-
+    void run();
 private:
 
 signals:

@@ -19,6 +19,8 @@ public:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0);
     RectDown();
     QTimer * timer;
+    void start();
+    void mousePressEvent(QGraphicsSceneMouseEvent * );
 public slots:
     void move();
 };

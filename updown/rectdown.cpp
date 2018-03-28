@@ -4,6 +4,8 @@ RectDown::RectDown()
 {
     m_text="some text long text";
     myWidth=m_text.size()*8;
+}
+void RectDown::start(){
     timer = new QTimer();
     connect(timer,SIGNAL(timeout()),this,SLOT(move()));
     timer->start( (100));
@@ -25,4 +27,7 @@ void RectDown::move(){
         return;
     }
     this->setPos(x(),y()+10);
+}
+void RectDown::mousePressEvent(QGraphicsSceneMouseEvent * event){
+    qDebug()<<m_text.c_str();
 }
